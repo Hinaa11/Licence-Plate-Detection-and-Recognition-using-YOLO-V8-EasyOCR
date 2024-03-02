@@ -19,10 +19,10 @@ def getOCR(im, coors):
     ocr = ""
 
     for result in results:
-        if len(results) == 2:
-            ocr = result[2]
-        if len(results) >2 and len(results[2])>8 and results[2]> conf:
-            ocr = result[2]
+        if len(results) == 1:
+            ocr = result[1]
+        if len(results) >1 and len(results[1])>6 and results[2]> conf:
+            ocr = result[1]
     
     return str(ocr)
 
